@@ -50,7 +50,7 @@ INT S_MAP[64] = {
 };
 
 /* PERMUTED CHOICE  PC1 */
-int pc1[] = {
+int PC1[] = {
     57, 49, 41, 33, 25, 17, 9,
     1, 58, 50, 42, 34, 26, 18,
     10, 2, 59, 51, 43, 35, 27,
@@ -71,7 +71,7 @@ unsigned short shifts[] = {
 
 /* permuted choice 2 (pc@) */
 
-int pc2[] = {
+int PC2[] = {
     14, 17, 11, 24, 1, 5,
     3, 28, 15, 6, 21, 10,
     23, 19, 12, 4, 26, 8,
@@ -312,7 +312,7 @@ void des(BYTE *in, BYTE *out, INT r, char flag) {
        printf( "%d", LR[i]);
        */
     /* Permute L and R with reverse IP-1 to generate output block*/
-    for (j=0; j < 64; j++) block [j] = LR[RFP[j]-1];
+    for (j=0; j < 64; j++) block [j] = LR[RIP[j]-1];
 
     /* Pack data into 8 bits per byte */
 

@@ -1,4 +1,4 @@
-#include <map>
+#include <cstring>
 
 #define BYTE unsigned char
 #define INT unsigned int
@@ -59,4 +59,22 @@ int get_packed8_from_hex(char *src, BYTE* dest) {
         dest[i] = (hex_val1<<4) | hex_val2;
     }
     return 0;
+}
+
+void get_packed8_from_unpacked_str(char * src, BYTE *dest) {
+    for(INT i = 0; i < 8; ++i)
+        dest[i] = 0;
+
+    for(INT i = 0; i < 64; ++i) {
+        dest[(i>>3)] += ((src[i]-'0') << (7 - (i&0x7)));
+    }
+}
+
+void packed8_from_sp_hex(char *src, BYTE *dest) {
+    for(INT j = 0; j < 8; ++ j) {
+        BYTE ch1 = src[(j<<1)] - 'f';
+        BYTE ch2 = src[(j<<1)|1] - 'f';
+
+        dest[j] = (ch1<<4)|ch2 + 16;
+    }
 }

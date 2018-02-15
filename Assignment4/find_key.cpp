@@ -7,8 +7,6 @@
 using namespace std;
 
 ifstream input_pair_file, output_pair_file;
-map<long long, INT> key_counter;
-int key_freq[100000] = {0};
 unsigned long long tobenum = 67108864;
 
 void print_format(char *binary_exec_str) {
@@ -29,20 +27,6 @@ void print_array(BYTE *arr, int len) {
 }
 
 bool SBOX_MAP[8];
-
-void update_counts(vector<long long> keynums[], int start, long long cur) {
-    if(start == 8) {
-        key_counter[cur] = key_counter[cur] + 1;
-        return;
-    }
-    if(SBOX_MAP[start])
-        for(int i = 0; i < keynums[start].size(); i++) {
-            long long n = (keynums[start][i])<<(6*start);
-            update_counts(keynums, start+1, n|cur);
-        }
-    else
-        update_counts(keynums, start+1, cur);
-}
 
 int main(int argc, char **argv) {
     if (argc != 5) {
@@ -73,7 +57,7 @@ int main(int argc, char **argv) {
     // print_array(unpacked_c_diff, 32);
 
     // Stores the output ciphers (Lo,Ro), (Lo*, Ro*)
-    string output_str[2];
+    char output_str[2][256];
 
     BYTE output_packed[2][8], output_unpacked[2][64];
     BYTE unpermuted_output_unpacked[2][64];
@@ -93,12 +77,7 @@ int main(int argc, char **argv) {
         // ********************
 
         for(INT i = 0; i < 2; ++ i) {
-            for(INT j = 0; j < 8; ++ j) {
-                BYTE ch1 = output_str[i][(j<<1)] - 'f';
-                BYTE ch2 = output_str[i][(j<<1)|1] - 'f';
-
-                output_packed[i][j] = (ch1<<4)|ch2;
-            }
+            packed8_from_sp_hex(output_str[i], output_packed[i]);
             unpack8(output_packed[i], output_unpacked[i]);
         }
 
@@ -184,32 +163,13 @@ int main(int argc, char **argv) {
                 }
             }
         }
-        // update_counts(keynums, 0, 0);
     }
 
-    for(int i=0;i<=100000;i++) {
-        key_freq[i] = 0;
-    }
-    cout<<"Getting results\n";
-    INT count = 0;
-    for (map<long long, INT>::iterator it = key_counter.begin(); it != key_counter.end(); ++it) {
-        key_freq[it->second]++;
-        if(key_freq[it->second] > 10000)
-        cout << it->first << "\t:\t" << it->second;
-        cout << endl;
-        count++;
-    }
-    // cout<<"The count is "<<count<<endl;
-    // for(int i=0;i<=100000;i++) {
-    //     if(key_freq[i])
-    //         cout<<i<<"\t:\t"<<key_freq[i]<<"\n";
-    // }
     for (INT t = 0; t < 8; ++ t) {
         if (argv[3][t] == '1') {
             cout << t << ": " << endl;
             for(INT i = 0; i < 64; ++ i)
-                if(key_ctr[t][i]>8000)
-                    cout << i << ":" << key_ctr[t][i] << ' ';
+                cout << i << ":" << key_ctr[t][i] << ' ';
             cout << endl;
         }
     }
