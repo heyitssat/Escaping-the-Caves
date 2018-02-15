@@ -1,0 +1,435 @@
+Other Pairs
+
+aa: nggfnofhjrhqoqjp
+ab: qjfgfgfgrrukggpu
+ac: sjkiumlstiqgqhrf
+ad: lrjttirmtmklmttk
+ae: nusukgghsnnsltih
+af: qfgtpouuojkspjpn
+ag: lhifkkfthhonqhti
+ah: ifqgsgnjtfsqomms
+ai: umngnjnnprouujmu
+aj: thsqnugpsmhfpjio
+ak: titpotrmhosjislm
+al: umomunmiftungjup
+am: lsjqopmfftftnimh
+an: kgnolsqjurkfuqhl
+ao: ngnksqgrtofigikr
+ap: slhrhikpgsooshqn
+aq: irpqfnqohrrijljj
+ar: qpupjssurmqgnhum
+as: gmltqkqjltsinoom
+at: mhjkpkksjnogtjmk
+au: ruulphsgsthtpflk
+av: jusrkjnmffohntus
+aw: slkotgjmukgkrgkj
+ax: iurgpgguttmkllsi
+ay: ikiohhfrnoqssmsp
+az/za: fmfufimojoukmuto
+zb: nqgtinogmkktnrmk
+zc: ouhjhlmkrfukhfsi
+zd: jijpqtuuhpkpspir
+ze: rhiphlmjtlmninii
+zf: rqshjpntpmriigjn
+zg: pgmhrnnontmkfuoo
+zh: rfoigfkiptrfnkgt
+zi: osqtkrkjumsoustn
+zj: glguqlgjqpltugsi
+zk: prutltkjhqoknkot
+zl: qqsjjpjnootlukpk
+zm: thfpnoqrokikpinu
+zn: prfuifopqqfuqspi
+zo: ltuhlpkihsisiksu
+zp: hohjhiifnuthkfmj
+zq: ooflhimjsuomkhor
+zr: qpnlmuphjtgsjpqu
+zs: qoulihlnntoojnkj
+zt: kfsogroktfigjnij
+zu: lkphngmpmqpgufgq
+zv: sglfogkonqijrqog
+zw: shpogqqupoiumuoq
+zx: ihfokqunoormltml
+zy: fujstplfkpumlugp
+zz: onjiqtnhjtqiufij
+
+fg: jjlhhfufsqithooi
+gf: pujlqttkhsmrrkoj
+gh: sjtpsrqpsgtmmhgh
+hg: umqiugghujqtklqt
+
+ba: qjfgfgfgrrukggpu
+bb: sjkiumlstiqgqhrf
+bc: lrjttirmtmklmttk
+bd: nusukgghsnnsltih
+be: qfgtpouuojkspjpn
+bf: lhifkkfthhonqhti
+bg: ifqgsgnjtfsqomms
+bh: umngnjnnprouujmu
+bi: thsqnugpsmhfpjio
+bj: titpotrmhosjislm
+bk: umomunmiftungjup
+bl: lsjqopmfftftnimh
+bm: kgnolsqjurkfuqhl
+bn: ngnksqgrtofigikr
+bo: slhrhikpgsooshqn
+bp: irpqfnqohrrijljj
+bq: qpupjssurmqgnhum
+
+Single Chars
+
+a: qfgtpouuojkspjpn
+b: lhifkkfthhonqhti
+c: ifqgsgnjtfsqomms
+d: umngnjnnprouujmu
+e: thsqnugpsmhfpjio
+f: ghirlfsohhkhisfk
+g: pujlqttkhsmrrkoj
+h: nrkonkiporfpfsmr
+i: sjjqohijqiusmrfl
+j: gfqhfkouqnpllkij
+k: rsrthmimhkqjuusp
+l: gpphnjofkfqsuhpn
+m: plqfsotfhjsjtrof
+n: sntorijmhqmrjjpl
+o: qrkitpgkruhtrffk
+p: qnrgpsflpkpprfqq
+q: plouthqrintoktsu
+r: rkphstoflggjnhns
+s: ngnksqgrtofigikr
+t: rqshjpntpmriigjn
+u: sglfogkonqijrqog
+v: nqgtinogmkktnrmk
+w: ouhjhlmkrfukhfsi
+x: jijpqtuuhpkpspir
+y: rhiphlmjtlmninii
+z: rqshjpntpmriigjn
+;: jhtgmtlpffphpmgt
+:: qnrgpsflpkpprfqq
+.: fiugpmtjskgpltql
+,: uitmnhrmspunshgr
+{: pgmhrnnontmkfuoo
+}: osqtkrkjumsoustn
+[: fhljimjlkmrthlig
+]: qjfgfgfgrrukggpu
+?: srqjlhmriffijpsp
+/: urgpstfnhkqgtikr
+\: nggfnofhjrhqoqjp
+<: opopqpnqjhflotim
+>: fgfutqlklthjhosi
+': ohfuispiintrkmko
+": mimqhghsmigoshtr
+|: rfoigfkiptrfnkgt
+!: pokktiqthlqqunft
+@: tnnthunpjimoujoh
+#: ogfqossfitojfnup
+$: ifgtsptspktllqri
+%: ngjqqlumlltmjokn
+^: sjkiumlstiqgqhrf
+&: gmqokgritoouqtut
+*: qrkitpgkruhtrffk
+(: jsqrgqkrkmotnqkm
+): shrnqhojsfimknlk
+-: gmsguqnnupimtfri
+_: lrjttirmtmklmttk
++: qifqqsigmtkprpit
+=: srrnmpuoqumhrhqs
+~: glguqlgjqpltugsi
+`: nusukgghsnnsltih
+0: ttqtosrnprqhskun
+1: krrhgrkltsurigpl
+2: fmkhfutokktonluf
+3: onkmursmtkkghror
+4: plqpkqfqmlkkkhui
+5: kmsfgonohklunmtu
+6: ljpnsstfujfpmnqi
+7: fjnqnfqomqjqtlot
+8: pjprlqrqjqutshsh
+9: ijroksqimhupfhlp
+A: gtstppjunjtfouil
+B: qsklkqmultftrolk
+C: gpsqpimqitohrpim
+D: muupnkgfmnhunogh
+E: toqfsppmugooouju
+F: phoqqpmhkmlrjnmg
+G: qlfgnukoumtquktf
+H: ruskgmhtntkfpnkl
+I: lgunsjgfnfmrsiun
+J: plouthqrintoktsu
+K: sgqiiuqlpmgfnjrm
+L: qmhhqifkrltoifkg
+M: pimuilqgslgonmjq
+N: ftrguuofigrspfhj
+O: uonnniphttmnpisn
+P: trrnqnlkojrutojn
+Q: lksgtmpotfltripf
+R: fntrqtgljngojlii
+S: purtholirunpmrfu
+T: hprkohnnhsgipjmh
+U: ukkoupihfpgullrf
+V: kitshmmptlnriuui
+W: qngktuthqjrlojjn
+X: surqgkigtufrjrfo
+Y: qnhintmsqjrptjlk
+Z: rkphstoflggjnhns
+
+
+Important Pairs
+
+ff : ghirlfsohhkhisfk
+fg : jjlhhfufsqithooi
+fh : oktiufqptjigfpnt
+fi : nmfhorliprmiknhf
+fj : qlktgmoktuorgurh
+fk : ufhthoguklpfqmor
+fl : mpliuphrsknrrhqf
+fm : ujhpggslnumlhtqp
+fn : rorsntpnmtfoghpl
+fo : mfinnfrllmojroho
+fp : lopnmuhkktqsuqst
+fq : hugltqhhhskmhfom
+fr : jmojtqigtrkjnirp
+fs : jjupmgjglrggugji
+ft : opruihjjsgijthqi
+fu : gumhquoqfsomlijj
+gf : pujlqttkhsmrrkoj
+gg : toskhrrlkrojuqfi
+gh : sjtpsrqpsgtmmhgh
+gi : mornhiggknulntki
+gj : prfpjjmnrujujojh
+gk : oqrllskiknlmnnqu
+gl : gggnqguniqgftrpf
+gm : rtspjfipitsfmrnq
+gn : kjrkntjniulniggf
+go : --------------------------
+gp : glggfrrjrroomolt
+gq : pupjkoilinttsttr
+gr : roqosqjslnpqtsoq
+gs : fksntrmnrisinifi
+gt : fqlhghutgoqumqir
+gu : fmrksiollqkmrjhs
+hf : nrkonkiporfpfsmr
+hg : umqiugghujqtklqt
+hh : irmqtpsoiisijrhq
+hi : rtpsjotijugimpji
+hj : fklnuljtfrorhlsi
+hk : sligsggpmrghnurt
+hl : lnhogigipflpplrj
+hm : qfqqmsrrqggkiiui
+hn : lrqskftormlphppj
+ho : jpjftflhjpluhnhr
+hp : npskhfrfhupfrjhg
+hq : rtlkptoqirlifros
+hr : lgptginqrutksoun
+hs : mougurtppsritspo
+ht : jtoqmjfkfogiojht
+hu : rhptumutolkoului
+if : sjjqohijqiusmrfl
+ig : tqggnpmqhpgonqtn
+ih : suqgrifmjisumhuk
+ii : osjfiqhpggfsjkhg
+ij : kijtmrqrohimqphk
+ik : nijonsjhqjoumtns
+il : uhrloilufnpghgrh
+im : imjmlormruliklro
+in : ogfiuttgjojnqjor
+io : ntnlutosqngusnul
+ip : nssrfnpmrlhulpun
+iq : tjrfongirqsltftq
+ir : qhphgifmggfkltjr
+is : pnkontkjkpmuqgjg
+it : lrfrhiokhjniutog
+iu : iolmklukijmjkpfo
+jf : gfqhfkouqnpllkij
+jg : grpnmfoisohskkms
+jh : jqhllgkkustuhtgf
+ji : gqssohsrfonlipqs
+jj : uhkignglortoiptl
+jk : jgthrfrnpgongoui
+jl : oimmjqknqlnpgjjj
+jm : huppmljgqptthhrl
+jn : ihktslrmunplnjgs
+jo : gqjsqmsjriiskjsn
+jp : hnffiinukmtjtisi
+jq : qnkmmfkljooqipjl
+jr : fnqgkpkihflpgrss
+js : orritgunompnrrnu
+jt : jtpqtssfkfgklpog
+ju : ggsmlhloqhprftqj
+kf : rsrthmimhkqjuusp
+kg : jlnmjnqknhhqhilj
+kh : fihomjotturgoljj
+ki : hqruninithgnitqr
+kj : ffglgptpfiqkgrtm
+kk : nnhfttkjhtfromtg
+kl : phoinpiplrrjnsql
+km : qoopfmnqjirijius
+kn : qiknlsmqlqqufkis
+ko : gjrofqpllnqkulqt
+kp : gpsmtmouksnfrtrn
+kq : hsqsujrhmjuhsnuj
+kr : ninolpqjulpuqnhi
+ks : kmsouulmtmgmlspf
+kt : froltthkrfhhoppk
+ku : tinskmkgfmonjljn
+lf : gpphnjofkfqsuhpn
+lg : lukgukhpflopntoi
+lh : gpkhhsqlmosnrilp
+li : kqgohjulmsnqtphm
+lj : tkuisjhomjguhnuk
+lk : kutqihrlupmfrssg
+ll : frtsoiriiijuqofl
+lm : hnjjqjmuinstpiht
+ln : tmjjtfpjmosjkssn
+lo : utkmmiughqmjsgul
+lp : rjpiniltrqgrosfh
+lq : kuljukuoolfpghln
+lr : qlfigrttmumuhopf
+ls : spltsifhrrnumhfs
+lt : psuotknohjsukqtr
+lu : kfqfguttrilmtpml
+mf : plqfsotfhjsjtrof
+mg : nsjtjoittiknkqop
+mh : ujnrpsgkqgfjqsuo
+mi : ihhfnjpgftunjhgn
+mj : ffjgmhmnjgrruuim
+mk : hrnqifjfspjmukhn
+ml : uqjhrftgusqtkqtl
+mm : omlsnpusnrtfmumf
+mn : qtfikillrqpuhpos
+mo : tlshjiihqnotofqp
+mp : tghkigtsfmmijuor
+mq : gmtokitqgmqrjouu
+mr : ofrrjllltsorqipf
+ms : tnjjnjgimkusnsns
+mt : psuksjltttjftgnp
+mu : nfjrrhfptntjiulf
+nf : sntorijmhqmrjjpl
+ng : onkfrsmjnqquuhhm
+nh : igupmmhstrgmktqh
+ni : qqqpgkfrtjtpuhln
+nj : jlrqrjoimooftgps
+nk : huirftikhtnifnnh
+nl : isrksjmstthgfmkq
+nm : pokktiqthlqqunft !
+nn : mimqhghsmigoshtr "
+no : ogfqossfitojfnup #
+np : ifgtsptspktllqri $
+nq : ngjqqlumlltmjokn %
+nr : gmqokgritoouqtut &
+ns : ohfuispiintrkmko '
+nt : jsqrgqkrkmotnqkm (
+nu : shrnqhojsfimknlk )
+of : qrkitpgkruhtrffk *,o
+og : qifqqsigmtkprpit +
+oh : uitmnhrmspunshgr ,
+oi : gmsguqnnupimtfri -
+oj : fiugpmtjskgpltql .
+ok : urgpstfnhkqgtikr /
+ol : ttqtosrnprqhskun 0
+om : krrhgrkltsurigpl 1
+on : fmkhfutokktonluf 2
+oo : onkmursmtkkghror 3
+op : plqpkqfqmlkkkhui 4
+oq : kmsfgonohklunmtu 5
+or : ljpnsstfujfpmnqi 6
+os : fjnqnfqomqjqtlot 7
+ot : pjprlqrqjqutshsh 8
+ou : ijroksqimhupfhlp 9
+pf : qnrgpsflpkpprfqq :,p
+pg : jhtgmtlpffphpmgt ;
+ph : opopqpnqjhflotim <
+pi : srrnmpuoqumhrhqs =
+pj : fgfutqlklthjhosi >
+pk : srqjlhmriffijpsp ?
+pl : tnnthunpjimoujoh @
+pm : gtstppjunjtfouil A
+pn : qsklkqmultftrolk B
+po : gpsqpimqitohrpim C
+pp : muupnkgfmnhunogh D
+pq : E
+pr : F
+ps : G
+pt : H
+pu : I
+qf : J
+qg : sgqiiuqlpmgfnjrm K
+qh : qmhhqifkrltoifkg L
+qi : pimuilqgslgonmjq M
+qj : ftrguuofigrspfhj N
+qk : uonnniphttmnpisn O
+ql : trrnqnlkojrutojn P
+qm : lksgtmpotfltripf Q
+qn : fntrqtgljngojlii R
+qo : purtholirunpmrfu S
+qp : hprkohnnhsgipjmh T
+qq : ukkoupihfpgullrf U
+qr : kitshmmptlnriuui V
+qs : qngktuthqjrlojjn W
+qt : surqgkigtufrjrfo X
+qu : qnhintmsqjrptjlk Y
+rf : rkphstoflggjnhns r,Z
+rg : fhljimjlkmrthlig [
+rh : nggfnofhjrhqoqjp \
+ri : qjfgfgfgrrukggpu ]
+rj : sjkiumlstiqgqhrf ^
+rk : lrjttirmtmklmttk _
+rl : nusukgghsnnsltih `
+rm : qfgtpouuojkspjpn a
+rn : lhifkkfthhonqhti b
+ro : ifqgsgnjtfsqomms c
+rp : umngnjnnprouujmu d
+rq : thsqnugpsmhfpjio e
+rr : titpotrmhosjislm
+rs : umomunmiftungjup
+rt : lsjqopmfftftnimh
+ru : kgnolsqjurkfuqhl
+sf : ngnksqgrtofigikr s
+sg : slhrhikpgsooshqn
+sh : irpqfnqohrrijljj
+si : qpupjssurmqgnhum
+sj : gmltqkqjltsinoom
+sk : mhjkpkksjnogtjmk
+sl : ruulphsgsthtpflk
+sm : jusrkjnmffohntus
+sn : slkotgjmukgkrgkj
+so : iurgpgguttmkllsi
+sp : ikiohhfrnoqssmsp
+sq : fmfufimojoukmuto
+sr : nqgtinogmkktnrmk v
+ss : ouhjhlmkrfukhfsi w
+st : jijpqtuuhpkpspir x
+su : rhiphlmjtlmninii y
+tf : rqshjpntpmriigjn z
+tg : pgmhrnnontmkfuoo {
+th : rfoigfkiptrfnkgt |
+ti : osqtkrkjumsoustn }
+tj : glguqlgjqpltugsi ~
+tk : prutltkjhqoknkot
+tl : qqsjjpjnootlukpk
+tm : thfpnoqrokikpinu
+tn : prfuifopqqfuqspi
+to : ltuhlpkihsisiksu
+tp : hohjhiifnuthkfmj
+tq : ooflhimjsuomkhor
+tr : qpnlmuphjtgsjpqu
+ts : qoulihlnntoojnkj
+tt : kfsogroktfigjnij
+tu : lkphngmpmqpgufgq
+uf : sglfogkonqijrqog
+ug : shpogqqupoiumuoq
+uh : ihfokqunoormltml
+ui : fujstplfkpumlugp
+uj : onjiqtnhjtqiufij
+uk : lkjqllsgftqphgkh
+ul : qghftrjhpmttiuim
+um : qssqjpfjigkfhnlj
+un : hklhujjftsghtknl
+uo : thmgkumqjfunghum
+up : hqthmtsufitqfutq
+uq : tftktosnljrinqmf
+ur : gtjulufgiqspjrfr
+us : oksrsmulrlsshgun
+ut : ksmkhpmlqtsruqgk
+uu : hlsgfhlotqglkslo
+
+
