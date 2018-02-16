@@ -60,8 +60,8 @@ int main(int argc, char **argv) {
         // print_array(exp_input_pair[0], 64);
         // print_array(exp_input_pair[1], 64);
         for(INT k=0;k<64;k++) {
-            perm_exp_input_pair[0][k] = exp_input_pair[0][RIP[k]-1];
-            perm_exp_input_pair[1][k] = exp_input_pair[1][RIP[k]-1];
+            perm_exp_input_pair[0][k] = exp_input_pair[0][IP_INV[k]-1];
+            perm_exp_input_pair[1][k] = exp_input_pair[1][IP_INV[k]-1];
         }
         // print_array(perm_exp_input_pair[0], 64);
         // print_array(perm_exp_input_pair[1], 64);

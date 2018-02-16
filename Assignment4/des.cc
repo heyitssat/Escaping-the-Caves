@@ -147,7 +147,7 @@ INT IP[] = {
 
 /* REAL INVERSE PERMUTATION (RIP) */
 
-INT RIP[] = {
+INT IP_INV[] = {
     40, 8, 48, 16, 56, 24, 64, 32,
     39, 7, 47, 15, 55, 23, 63, 31,
     38, 6, 46, 14, 54, 22, 62, 30,
@@ -172,7 +172,7 @@ INT RFP[] = {
 };
 
 /* INVERSE REVERSE PERMUTATION */
-INT IRFP[] = {
+INT RFP_INV[] = {
     57, 49, 41, 33, 25, 17, 9, 1,
     59, 51, 43, 35, 27, 19, 11, 3,
     61, 53, 45, 37, 29, 21, 13, 5,
@@ -312,7 +312,7 @@ void des(BYTE *in, BYTE *out, INT r, char flag) {
        printf( "%d", LR[i]);
        */
     /* Permute L and R with reverse IP-1 to generate output block*/
-    for (j=0; j < 64; j++) block [j] = LR[RIP[j]-1];
+    for (j=0; j < 64; j++) block [j] = LR[RFP[j]-1];
 
     /* Pack data into 8 bits per byte */
 

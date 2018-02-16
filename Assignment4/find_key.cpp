@@ -81,11 +81,11 @@ int main(int argc, char **argv) {
             unpack8(output_packed[i], output_unpacked[i]);
         }
 
-        // Perform the "reverse of RFP" to get the output of DES
+        // Perform the "inverse of RFP" to get the output of DES
         // before performing RFP
         for(INT i = 0; i < 64; ++ i) {
-            unpermuted_output_unpacked[0][i] = output_unpacked[0][IP[i]-1];
-            unpermuted_output_unpacked[1][i] = output_unpacked[1][IP[i]-1];
+            unpermuted_output_unpacked[0][i] = output_unpacked[0][RFP_INV[i]-1];
+            unpermuted_output_unpacked[1][i] = output_unpacked[1][RFP_INV[i]-1];
         }
 
         // Outputs unpacked to bit representation
