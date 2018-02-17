@@ -52,13 +52,7 @@ int check_key(char *key) {
         for(INT i = 0; i < 8; ++i) {
             if (packed_output_local[i] != packed_output_server[i])
                 if_correct = false;
-            cout << (int)packed_output_local[i] << ' ';
         }
-        cout << endl;
-        for(INT i = 0; i < 8; ++i) {
-            cout << (int)packed_output_server[i] << ' ';
-        }
-        cout << endl;
 
         if (if_correct) ctr++;
     }

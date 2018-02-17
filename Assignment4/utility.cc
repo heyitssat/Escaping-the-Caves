@@ -75,6 +75,6 @@ void packed8_from_sp_hex(char *src, BYTE *dest) {
         BYTE ch1 = src[(j<<1)] - 'f';
         BYTE ch2 = src[(j<<1)|1] - 'f';
 
-        dest[j] = (ch1<<4)|ch2 + 16;
+        dest[j] = (ch1<<4)|ch2;
     }
 }

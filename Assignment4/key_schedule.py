@@ -1,3 +1,4 @@
+from __future__ import print_function
 
 pc1 = [
     57, 49, 41, 33, 25, 17, 9,
@@ -26,28 +27,28 @@ pc2 = [
     46, 42, 50, 36, 29, 32
 ];
 
-key = [i for i in range(64)]
+key = [(i+1) for i in range(64)]
 
-CD = [key[pc1[i]]-1 for i in range(56)]
+CD = [key[pc1[i]-1] for i in range(56)]
 
-for r in range(6):
-    for i in range(shifts[r]):
+for i in range(6):
+    for j in range(shifts[i]):
         t1 = CD[0]
         t2 = CD[28]
-        for i in range(27):
-            CD[i] = CD[i+1]
-            CD[i+28] = CD[i+29]
+        for k in range(27):
+            CD[k] = CD[k+1]
+            CD[k+28] = CD[k+29]
         CD[27] = t1
         CD[55] = t2
 
 rkey = [CD[pc2[i]-1] for i in range(48)]
 
 key = ['x']*64
-subkey = [-1, 32, -1, 54, 19, 26, 51, 37]
+subkey = [7, 32, -1, 54, 19, 26, 51, 37]
 for i, subkey_part in enumerate(subkey):
     if subkey_part >= 0:
         for j in xrange(6):
-            key[rkey[6*i+j]] = str((subkey_part>>(6-j)) & 0x1)
+            key[rkey[6*i+j]-1] = str((subkey_part>>(5-j)) & 0x1)
 
 for i in xrange(8):
     key[(i<<3)|0x7] = '0'
