@@ -1,4 +1,4 @@
-#include <cstring>
+#include <cctype>
 
 #define BYTE unsigned char
 #define INT unsigned int
