@@ -13,7 +13,8 @@ void print_format(char *binary_exec_str) {
     cout << binary_exec_str << " <File with input pairs> \n\
         <File with corresponding output pairs> \n\
         <binary mask for choosing S boxes> \n\
-        <c': value to xor with l'>" << endl;
+        <c': value to xor with l'> \n\
+        <key to verify>" << endl;
 }
 
 void print_array(BYTE *arr, int len) {
@@ -26,7 +27,7 @@ void print_array(BYTE *arr, int len) {
 }
 
 int main(int argc, char **argv) {
-    if (argc != 5) {
+    if (argc != 6) {
         print_format(argv[0]);
         return 0;
     }
@@ -43,6 +44,12 @@ int main(int argc, char **argv) {
     }
     unpack8(packed_c_diff, unpacked_c_diff);
 
+    // unpack user suggested key to unsigned byte
+    BYTE suggested_key[8];
+    get_packed8_from_hex(argv[5], suggested_key);
+    for (INT i = 0; i < 8; ++ i) cout << (int)suggested_key[i] << ' ';
+    cout << endl;
+
     // c unpacked to bit representation
     // cout << "c': input to last round as L\n";
     // print_array(unpacked_c_diff, 32);
@@ -56,7 +63,7 @@ int main(int argc, char **argv) {
     BYTE *fbox_ip[2];
     BYTE fbox_op_diff[32];
 
-    INT key_ctr[8][64] = {};
+    INT t, num_ip_pairs_cool = 0;
 
     // For each output pair in the input file convert it
     // to the binary representation and then perform our check for the key
@@ -90,7 +97,11 @@ int main(int argc, char **argv) {
         // unsigned long long num = 0;
         for(INT i = 0; i < 64; ++ i) {
             cipher_diff[i] = unpermuted_output_unpacked[0][i] ^ unpermuted_output_unpacked[1][i];
+            // if(i<32)
+            //     num = (num<<1) + cipher_diff[i];
         }
+        // cout<<num<<endl;
+        // if(num != tobenum) continue;
 
         //cout << "Output diff permuted:\n";
         //print_array(cipher_diff, 64);
@@ -120,14 +131,16 @@ int main(int argc, char **argv) {
         fbox_ip[0] = &(unpermuted_output_unpacked[0][0]);
         fbox_ip[1] = &(unpermuted_output_unpacked[1][0]);
 
-        for(INT t = 0; t < 8; ++ t) {
+        for(t = 0; t < 8; ++ t) {
             if (argv[3][t] == '1') {
                 BYTE expanded_ip[2] = {}, sbox_ip[2] = {};
-                for(INT k = 0; k < 2; ++ k)
+                for(INT k = 0; k < 2; ++ k) {
                     for(INT i = 0; i < 6; ++ i) {
                         expanded_ip[k] <<= 1;
                         expanded_ip[k] += fbox_ip[k][E[6*t + i]-1];
                     }
+                    sbox_ip[k] = suggested_key[t] ^ expanded_ip[k];
+                }
                 // cout<<"The expanded_ip1 is "<<(int)expanded_ip[0]<<endl;
                 // cout<<"The expanded_ip2 is "<<(int)expanded_ip[1]<<endl;
 
@@ -136,27 +149,15 @@ int main(int argc, char **argv) {
                     sbox_op_diff = (sbox_op_diff<<1) + fbox_op_diff[(t<<2)+i];
                 // cout<<"The sbox_op_diff is "<<(int)sbox_op_diff<<endl;
 
-                for(BYTE key = 0; key < 64; ++ key) {
-                    sbox_ip[0] = key ^ expanded_ip[0];
-                    sbox_ip[1] = key ^ expanded_ip[1];
-
-                    if (sbox_op_diff == (S[t][S_MAP[sbox_ip[0]]-1] ^
-                                S[t][S_MAP[sbox_ip[1]]-1])) {
-                        ++ key_ctr[t][key];
-                    }
-                }
+                if (sbox_op_diff != (S[t][S_MAP[sbox_ip[0]]-1] ^
+                        S[t][S_MAP[sbox_ip[1]]-1]))
+                    break;
             }
         }
+        if (t == 8) num_ip_pairs_cool ++;
     }
 
-    for (INT t = 0; t < 8; ++ t) {
-        if (argv[3][t] == '1') {
-            cout << t << ": " << endl;
-            for(INT i = 0; i < 64; ++ i)
-                cout << i << ":" << key_ctr[t][i] << ' ';
-            cout << endl;
-        }
-    }
+    cout << num_ip_pairs_cool << '\n';
 
     return 0;
 }
