@@ -25,7 +25,8 @@ def get_distance(keysize, tries):
     return sum(dists)*1.0/(len(dists)*keysize)
 
 for keysize in range(16, 400, 8):
-    print("{}\t: {}".format(keysize, get_distance(keysize, 5)))
+    if debug:
+        print("{}\t: {}".format(keysize, get_distance(keysize, 5)))
 
 #  possible_keysizes = [2, 5, 3, 29, 31]
 possible_keysizes = [29]

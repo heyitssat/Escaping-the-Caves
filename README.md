@@ -14,6 +14,10 @@ Substitution Permutation Network
 
 Breaking 6 Round DES using 3 round characteristics
 
+## Bonus Assignment
+
+[Set 1: Basics from the cryptopals crypto challenges](https://cryptopals.com/sets/1 "Cryptopals page")
+
 ## Contributing
 
 Please read contributors.txt.
