@@ -112,7 +112,7 @@ def score(s):
             if(rc>len(s)/3):
                 sc = 0
                 break
-    return sc
+    return 1.0*sc/len(s)
 
 #  exp_char_freq = [
 #          0.0651738, 0.0124248, 0.0217339, 0.0349835,
