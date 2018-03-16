@@ -129,6 +129,8 @@ def DecodeChar(st):
 
 def DecodeBlock(cipher):
     if len(cipher) != 16:
+        print("The cipher is")
+        print(cipher)
         print("DecodeBlock only 16 bytes, input text is not 16 bytes")
         assert False
     plain = [ DecodeChar(cipher[i:i+2]) for i in range(0, len(cipher), 2)]
