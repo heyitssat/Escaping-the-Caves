@@ -27,5 +27,5 @@ if len(sys.argv) < 3:
 else:
     input_file = sys.argv[1]
     no_lines = int(sys.argv[2])
-    decrypt(input_file, no_lines)
+    print(decrypt(input_file, no_lines))
     print("{} lines of the file: {} has been decrypted".format(no_lines, input_file))

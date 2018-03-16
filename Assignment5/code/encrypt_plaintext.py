@@ -45,7 +45,7 @@ def encrypt_file(f1, f2):
     with open(f1, 'r') as plain_file, open(f2, 'w') as cipher_file:
         for line in plain_file.readlines():
             inps = line.strip().split(' ')
-            print(inps)
+            #  print(inps)
             outs = [encrypt(msg, rev_bits=False) for msg in inps]
             #  print(outs)
             cipher_file.write(" ".join(outs) + "\n")
