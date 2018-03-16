@@ -1,5 +1,9 @@
 # Utilities file for encryption/decryption
 
+################################################################################
+#  Functions for GF Elements
+################################################################################
+
 IRREDUCIBLE_POL = [1, 0, 0, 0, 0, 0, 1, 1]
 
 #  A GF_128 element will be represented as 7 bit integer
@@ -72,3 +76,44 @@ def LinearTransform (matrix, elem_list):
 
 #  [TODO]: To define properly for later use
 #  def Mod
+
+
+################################################################################
+#  Other Functions
+################################################################################
+
+def EncodeBlock(plain):
+    if len(plain) != 8:
+        print("EncodeBlock only 8 bytes, input text is not 8 bytes")
+        assert False
+
+    cipher = ""
+
+    for ch in plain:
+        cipher += EncodeChar(ch)
+    return cipher
+
+def EncodeChar(char):
+    if ord(char) > 128:
+        print("EncodeChar can only encode ascii char in range 1 - 128")
+        assert False
+
+    hex_str = "{0:02x}".format(ord(char))
+    fchar = chr(int(hex_str[0], 16) + ord('f'))
+    schar = chr(int(hex_str[1], 16) + ord('f'))
+    return fchar+schar
+
+def DecodeChar(st):
+    if len(st) != 2:
+        print("The length shoudl be 2")
+        assert False
+
+    char = chr(16*(ord(st[0]) - ord('f')) + ord(st[1]) - ord('f'))
+    return char
+
+def DecodeBlock(cipher):
+    if len(cipher) != 16:
+        print("DecodeBlock only 16 bytes, input text is not 16 bytes")
+        assert False
+    plain = [ DecodeChar(cipher[i:i+2]) for i in range(0, len(cipher), 2)]
+    return "".join(plain)
