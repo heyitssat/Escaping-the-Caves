@@ -14,7 +14,7 @@ LINEAR_KEY_TRANS = [
 EXPONENT_KEY = [ 1, 1, 1, 1, 1, 1, 1, 1 ]
 
 def LinExpoEncrypt (plaintext):
-    CT = [[0]*8]*8
+    CT = [[0 for j in range (8)] for i in range(8)]
     #  First Layer : Exponentiation
     for ind, elem in enumerate(plaintext):
         CT[0][ind] = Exponentiate(elem, EXPONENT_KEY[ind])

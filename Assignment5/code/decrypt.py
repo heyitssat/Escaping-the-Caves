@@ -3,7 +3,7 @@ import sys
 from utilities import *
 
 def decrypt(cipher_file, no_lines):
-    eqns = [[[0]*128]*no_lines]*8
+    eqns = [[[0 for i in range(128)] for j in range(no_lines)] for k in range(8)]
     line_no = 0
     with open(cipher_file, 'r') as cfile:
         for line in cfile.readlines():
