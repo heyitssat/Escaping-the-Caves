@@ -1,0 +1,168 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage[hyphens,spaces]{url}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{ragged2e}
+\usepackage{csquotes}
+% \citestyle{alpha}
+\bibliographystyle{abbrv}
+
+\hypersetup{colorlinks,urlcolor=blue,citecolor=cyan}
+
+\geometry{
+ a4paper,
+ total={170mm,237mm},
+ left=20mm,
+ top=25mm,}
+
+
+\title{CS641A: Assignment 7}
+\author{Rijndael \\Abhishek Jain, Arham Chopra, Ayush Tulsyan \\ 13027, 14130, 14807167}
+\date{}
+
+\begin{document}
+
+\maketitle
+\section{The Maze}
+\begin{justify}
+\textbf{You are in a small chamber. Unlike the previous hall, this chamber seems naturally formed -- the floor and walls are rocky and uneven. Was that hall and pool an illusion, you wonder. But then you notice a sign of human (or whatever) work: that someone has fixed lighted torches in the walls of the chamber, and these are providing ample light to see around. So you were not dreaming after all..\\
+You then notice that there are several exits from the chamber. You count five. And all but one of these exits have no doors! The exit with door has a panel next to it and the door is closed. Going closer to an open exit, you notice "Exit 2" written on the wall next to it.  Curious, you go around and find that the exits are numbered from 1 to 5 in this fashion. The closed exit is numbered 5 and the exit from which you came in is numbered 1.}
+\end{justify}
+$>$\textit{exit2}
+
+
+\begin{justify}
+\textbf{You reach a chamber that has five exits, numbered one through five. Exit numbered five is closed with a panel next to it. Remaining are open.
+}
+\end{justify}
+$>$\textit{exit4}
+
+
+
+\begin{justify}
+	\textbf{You reach a chamber that has five exits, numbered one through five. Exit numbered five is closed with a panel next to it. Remaining are open.
+	}
+\end{justify}
+$>$\textit{exit3}
+
+
+\begin{justify}
+	\textbf{You reach a chamber that has five exits, numbered one through five. Exit numbered five is closed with a panel next to it. Remaining are open.
+	}
+\end{justify}
+$>$\textit{exit1}
+
+
+\begin{justify}
+	\textbf{You reach a chamber that has five exits, numbered one through five. Exit numbered five is closed with a panel next to it. Remaining are open.
+	}
+\end{justify}
+$>$\textit{exit4}
+
+
+\begin{justify}
+	\textbf{You reach a chamber that has five exits, numbered one through five. Exit numbered five is closed with a panel next to it. Remaining are open.
+	}
+\end{justify}
+$>$\textit{exit4}
+
+
+\begin{justify}
+	\textbf{You reach a chamber that has five exits, numbered one through five. Exit numbered five is closed with a panel next to it. Remaining are open.
+	}
+\end{justify}
+$>$\textit{exit2}
+
+
+\begin{justify}
+	\textbf{You reach a chamber that has five exits, numbered one through five. Exit numbered five is closed with a panel next to it. Remaining are open.
+	}
+\end{justify}
+$>$\textit{exit2}
+
+
+\begin{justify}
+	\textbf{You reach a chamber that has five exits, numbered one through five. Exit numbered five is closed with a panel next to it. Remaining are open.
+	}
+\end{justify}
+$>$\textit{exit1}
+
+
+\begin{justify}
+	\textbf{You reach a chamber that has five exits, numbered one through five. Exit numbered five is closed with a panel next to it. Remaining are open.
+	}
+\end{justify}
+$>$\textit{read}
+
+
+\begin{justify}
+\textbf{n=7653218692148392573033354286047194756980164580492700443984485155088009631\\159257659310568644379904944679757784117382269864626731341716608666481589434571992\\197332380983894538560397695039729486084264679826307757280043355484051897815167503\\6652812391378489590219684082031027638892138605077068151604517037533012009\\
+\\Rijndael: This door has RSA encryption with exponent 5 and the password\\ 56789403245619791465269992625908733575606033360556986669402092071949485662541847654\\058298749171090101914102629458434684179655809530241196345412311886244327617990313\\079518583159897661451103794945662895504795621902036692893449660445459897100686681\\60971462095110923039715928073506290280724752848180050539166557}
+\end{justify}
+
+The cipher is efficiently decrypted through the following function
+
+\[
+dec(C, d, N) = (C)^{d} mod N
+\]
+
+but $d$ is unknown. Also, $d$ might be as 1000 bits long. So, guessing $d$ is not possible. \par
+
+Now, with the small public exponent, it is apparent that a low-exponent attack has to be used. \par
+
+Trivially, we proceeded with checking if no padding has been used and $C^{\frac{1}{e}}$ is an integer, but this is not the case. \par
+
+With a padding the equation becomes
+\[
+(M+x)^{e} = C \ mod N
+\]
+
+In this equation, $e$, $C$, and $N$ are known. We can also guess $M$ (which we discuss later). Thus low exponent attack can be used here \cite{latticereduction}. \par
+
+
+\subsection*{Coppersmith's Theorem} Let $N$ be an integer and $f$ be a polynomial of degree $δ$. Given $N$ and $f$, one can recover in polynomial time all $x_0$ such that $f(x_0) = 0\  mod N$ and $x_0 < N^{1/\delta}$ \cite{RSA_slides} \par
+
+Now, with this hand, we model our problem as follows $f(x) = (M+x)^{e}\ mod N$. If $x$ is smaller to $N^{1/e}$, we will find the required password as the root to this polynomial \par
+
+For solving this polynomial we used the a code available on github\cite{github}. This code can be used to obtain the solutions for the polynomial equation modulo N. We modified the code as follows:
+\begin{enumerate}
+    \item It demonstrates the attack over two setups. The second is irrelevant to us, so we got rid of that
+    \item N, e are known to us
+    \item To test the code, we used a custom message, generated the cipher $C$ and and a random password for $x$. Verified that the code works
+    \item Now we started with a custom padding \texttt{M}, translated it to its binary form \texttt{M\_binary}
+    \item The length of password $x$ is unknown, but since ascii has been translated to binary, we assume it to be a multiple of 8. Also, from our assumption $x_0 < N^{1/e}$, $x$ can't be longer than 200 bits. So, this can guessed via brute force
+    \item The final polynomial is $pol = ((M\_binary<<length\_x) + x)^e - C$
+    \item Root of the above polynomial is the required password and can be calculated using Coppersmith's Theorem and LLL (Lattice reduction)
+    \item For trying random input paddings, we changed the code to read from a hardcoded file "paddings.txt", and try each line as the padding.
+    \item We also changed to the working coppersmith to a function so that it can be called with different parameters.
+\end{enumerate}
+
+\subsection*{Random and Not so obvious Padding, $M$}
+For the $M$, we tried quite a few values.\\
+Some examples being:
+\begin{itemize}
+    \item "You reach a chamber that has five exits, numbered one through five. Exit numbered five is closed with a panel next to it. Remaining are open."
+    \item The combined string of all our passwords from previous assignments till now in serial order
+    \item Rijndael: This door has RSA encryption with exponent 5 and the password is
+    \item RIJNDAEL: THIS DOOR HAS RSA ENCRYPTION WITH EXPONENT 5 AND THE PASSWORD IS
+    \item rijndael: this door has rsa encryption with exponent 5 and the password is
+    \item This door has RSA encryption with exponent 5 and the password is
+    \item Indian Institute of Technology, Kanpur
+    \item CS641A: Modern Cryptology
+    \item Rijndael: This door has RSA encryption with exponent 5 and the password is:
+\end{itemize}
+Before the last one we tried quite a few more(read hundreds).\\
+Then we tried randomizing the last characters of the above strings and we got a hit with the last line.
+
+The password we got was \texttt{JBILKLNLKQ}
+
+
+
+\bibliography{ref}
+\end{document}
